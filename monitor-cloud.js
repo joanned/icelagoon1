@@ -315,7 +315,7 @@ async function checkSiteAvailability(site) {
         console.log(`  📝 Context: ${match.fullText.substring(0, 100)}...`);
         console.log('  ---');
         
-        if (match.date === '21') {
+        if (match.date === '20') {
           hasDate20 = true;
         }
       });

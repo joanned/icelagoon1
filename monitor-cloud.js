@@ -315,16 +315,16 @@ async function checkSiteAvailability(site) {
         console.log(`  📝 Context: ${match.fullText.substring(0, 100)}...`);
         console.log('  ---');
         
-        if (match.date === '20') {
+        if (match.date === '21') {
           hasDate20 = true;
         }
       });
       
       // Send Telegram notification only if date 20 is found
-      // if (hasDate20) {
+      if (hasDate20) {
         console.log('🔔 FOUND DATE 20 - Sending Telegram notification!');
         await sendTelegramNotification(matches, site.name);
-      // }
+      }
       
     } else {
       console.log(`[${new Date().toLocaleTimeString()}] No matching dates found on ${site.name} (${site.targetDates.join(', ')})`);

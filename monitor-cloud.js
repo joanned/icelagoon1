@@ -369,15 +369,9 @@ async function main() {
   console.log(`📱 Telegram notifications: ${process.env.TELEGRAM_CHAT_ID ? 'Configured' : 'Not configured'}`);
   console.log('Press Ctrl+C to stop\n');
   
-  // For cloud deployment, run once and exit (cron will restart)
-  if (process.env.NODE_ENV === 'production') {
-    await checkAllSites();
-    process.exit(0);
-  } else {
     // For local testing, run continuously
     await checkAllSites();
     setInterval(checkAllSites, CHECK_INTERVAL);
-  }
 }
 
 // Handle graceful shutdown

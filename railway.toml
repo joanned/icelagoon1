@@ -1,9 +1,0 @@
-[build]
-builder = "nixpacks"
-
-[deploy]
-startCommand = "npm start"
-
-[[crons]]
-schedule = "*/3 * * * *"  # Run every 3 minutes
-command = "npm start"

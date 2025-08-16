@@ -28,13 +28,6 @@ async function sendTelegramNotification(matches, siteName) {
     return;
   }
 
-  const hasDate20 = matches.some(match => match.date === '20');
-  
-  if (!hasDate20) {
-    console.log('No date 20 found, skipping Telegram notification');
-    return;
-  }
-
   const siteUrl = SITES.find(s => s.name === siteName)?.url;
   
   const message = `🎉 *Ice Lagoon Date 20 Available!*

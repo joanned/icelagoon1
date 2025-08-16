@@ -1,0 +1,22 @@
+{
+  "name": "ice-lagoon-monitor",
+  "version": "1.0.0",
+  "description": "Monitor Ice Lagoon tour availability",
+  "main": "monitor-cloud.js",
+  "scripts": {
+    "start": "node monitor-cloud.js",
+    "dev": "node monitor.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "node-notifier": "^10.0.1",
+    "play-sound": "^1.1.6",
+    "puppeteer": "^24.16.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["puppeteer", "monitoring", "automation"],
+  "author": "",
+  "license": "MIT"
+}
